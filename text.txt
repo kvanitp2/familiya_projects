@@ -1,0 +1,12 @@
+ФИО
+
+https://learngitbranching.js.org/?locale=ru_RU
+
+1) Добавление: git add .
+2) Коммит:     git commit -m "[название]"
+3) Загрузка:   git push -u origin [название ветки]
+
+4) Ветки:        git branch
+5) Переключение: git checkout [название ветки]
+
+17.01.23
