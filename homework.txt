@@ -8,3 +8,5 @@
 6) div, span, a, b, i, h1-h6, ul/ol, li.
 
 http://htmlbook.ru/html
+
+git config --local --list
