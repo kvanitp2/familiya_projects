@@ -9,4 +9,3 @@
 
 http://htmlbook.ru/html
 
-git config --local --list
