@@ -1,25 +1,24 @@
-const body = document.querySelector('body')
+const board = document.querySelector('#board')
+const squareNumber = 500
+const colors = ['#CB2821', '#EA899A', '#EFA94A', '#F54021',
+    '#2271B3', '#D0D0D0', '#6C6874', '#F39F18']
 
-for (let i = 0; i < 5; i++) {
-    const block = document.createElement('div')
-    block.innerHTML = 'Это мы добавили из JS ' + i
-    block.classList.add('test')
+for (let i = 0; i < squareNumber; i++) {
+    const square = document.createElement('div')
+    square.classList.add('square')
 
-    body.append(block)
+    board.append(square)
 }
 
-const btn = document.createElement('button')
-btn.innerHTML = 'Сброс стилей'
-btn.classList.add('reset')
 
-btn.addEventListener('click', () => {
-    const list = document.querySelectorAll('.test')
-    for(element of list){
-        element.classList.remove('test')
-    }
-})
+function randomColor() {
+    const index = Math.floor(Math.random() * colors.length)
+    return colors[index]
+}
 
+function setColor(element) {
 
+}
+function removeColor(element) {
 
-body.append(btn)
-
+}
