@@ -1,0 +1,8 @@
+git config --global --unset user.name
+git config --global --unset user.email
+
+git config --global user.name "[имя]"
+git config --global user.email [email]
+
+git clone https://github.com/kvanitp2/familiya_projects.git -b game
+
