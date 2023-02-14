@@ -21,21 +21,24 @@
         <h1 style="margin-bottom: 80px;">Выберите время</h1>
         <ul class="time-list" id="time-list">
             <li>
-                <button class="time-btn">10 сек</button>
+                <button class="time-btn" data-time="10">10 сек</button>
             </li>
             <li>
-                <button class="time-btn">20 сек</button>
+                <button class="time-btn" data-time="20">20 сек</button>
             </li>
             <li>
-                <button class="time-btn">30 сек</button>
+                <button class="time-btn" data-time="30">30 сек</button>
             </li>
             <li>
-                <button class="time-btn">40 сек</button>
+                <button class="time-btn" data-time="40">40 сек</button>
             </li>
         </ul>
     </div>
 
-    <div class="screen">3</div>
+    <div class="screen">
+        <h3 style="margin-bottom: 30px;">    Осталось: <span id="time">00:00</span>     </h3>
+        <div class="board" id="board"></div>
+    </div>
 
     <script src="./main.js"></script>
 </body>

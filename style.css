@@ -28,6 +28,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: margin 0.5s ease-out;
 }
 
 h1 {
@@ -50,7 +51,7 @@ h1 {
     flex-wrap: wrap;
 }
 .time-list li{
-    margin: 10px;
+    margin: 10px; 
 }
 
 .time-btn{
@@ -66,3 +67,22 @@ h1 {
     color: #16D9E3;
 }
 
+.board{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(118.38deg, #28323C -4.6%, #485563 200.44%);
+    box-shadow: -8px -8px 20px #2A333D, 10px 7px 20px #47546222;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.circle{
+    background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+}
