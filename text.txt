@@ -1,12 +1,7 @@
-ФИО
+git config --global --unset user.name
+git config --global --unset user.email
 
-https://learngitbranching.js.org/?locale=ru_RU
+git config --global user.name "[имя]"
+git config --global user.email [email]
 
-1) Добавление: git add .
-2) Коммит:     git commit -m "[название]"
-3) Загрузка:   git push -u origin [название ветки]
-
-4) Ветки:        git branch
-5) Переключение: git checkout [название ветки]
-
-17.01.23
+git clone https://github.com/kvanitp2/familiya_projects.git -b blink
