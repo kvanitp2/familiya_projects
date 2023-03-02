@@ -1,4 +1,25 @@
-/*
-linear-gradient(90deg, rgba(2,0,36,1) 0%,
- rgba(71,130,50,1) 68%, rgba(0,212,255,1) 100%)
-*/
+
+function getRandomGradient() {
+    function rgba() {
+        return `rgba(${f(0, 255)}, ${f(0, 255)}, ${f(0, 255)}, 1)`
+    }
+
+    function f(min, max) {
+        return Math.floor(Math.random() * (max - min) + min)
+    }
+    
+    let temp = ''
+    for (let i = 0; i < 3; i++) {
+        temp += rgba()
+        if (i === 0){
+            temp += ' 0%, '
+        } else if (i === 2){
+            temp += ' 100%'
+        }
+        else{
+            temp += ` ${f(0,100)}%, `
+        }
+    }
+   
+    return `linear-gradient(${f(0, 360)}deg, ${temp});`
+}

@@ -66,10 +66,12 @@ button {
 button:hover {
     color: #222;
 }
-button:focus{
+
+button:focus {
     outline: none;
 }
-.container .controls button{
+
+.container .controls button {
     position: absolute;
     left: 40%;
     top: 50%;
@@ -78,12 +80,13 @@ button:focus{
     border: none;
 }
 
-.down-button{
+.down-button {
     transform: translateX(-100%);
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
 }
-.up-button{
+
+.up-button {
     transform: translateY(-100%);
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
