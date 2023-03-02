@@ -1,3 +1,10 @@
+const items = document.querySelectorAll('.sidebar-item')
+for (let i = 0; i < items.length; i++) {
+    let color = getRandomGradient()
+    items[i].style.background = color
+}
+
+
 
 function getRandomGradient() {
     function rgba() {
@@ -7,19 +14,19 @@ function getRandomGradient() {
     function f(min, max) {
         return Math.floor(Math.random() * (max - min) + min)
     }
-    
+
     let temp = ''
     for (let i = 0; i < 3; i++) {
         temp += rgba()
-        if (i === 0){
+        if (i === 0) {
             temp += ' 0%, '
-        } else if (i === 2){
+        } else if (i === 2) {
             temp += ' 100%'
         }
-        else{
-            temp += ` ${f(0,100)}%, `
+        else {
+            temp += ` ${f(0, 100)}%, `
         }
     }
-   
-    return `linear-gradient(${f(0, 360)}deg, ${temp});`
+
+    return `linear-gradient(${f(0, 360)}deg, ${temp})`
 }

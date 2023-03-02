@@ -9,6 +9,7 @@ body {
 }
 
 .container {
+    color: #FFF;
     position: relative;
     overflow: hidden;
     width: 100vw;
