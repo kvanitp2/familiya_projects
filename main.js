@@ -7,7 +7,7 @@ const container = document.querySelector('.container')
 const slidesCount = mainSlide.querySelectorAll('div').length
 let activeSlideIndex = 0
 
-sidebar.style.top = `-${slidesCount - 1 * 100}vh`
+sidebar.style.top = `-${(slidesCount - 1) * 100}vh`
 
 function changeSlide(direction) {
     if (direction === 'up') {
@@ -23,9 +23,16 @@ function changeSlide(direction) {
     }
 
     const height = container.clientHeight
-    mainSlide.style.transform = `translateY(-${activeSlideIndex * height})px`
-    sidebar.style.transform = `translateY(${activeSlideIndex * height})px`
+    mainSlide.style.transform = `translateY(-${activeSlideIndex * height}px)`
+    sidebar.style.transform = `translateY(${activeSlideIndex * height}px)`
 }
+ 
+upBtn.addEventListener('click', () => {
+    changeSlide('up')
+})
+downBtn.addEventListener('click', () => {
+    changeSlide('down')
+})
 
 
 for (let i = 0; i < items.length; i++) {
