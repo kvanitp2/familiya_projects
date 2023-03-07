@@ -36,6 +36,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
+    animation: colors 3s ease-in infinite;
 }
 
 .lower {
@@ -48,6 +49,7 @@ body {
     left: 0;
     right: 0;
     margin: auto;
+    animation: colors 3s ease-in infinite;
 }
 
 .text {
@@ -57,4 +59,20 @@ body {
     font-size: 70px;
     font-weight: bold;
     color: purple;
+}
+
+
+@keyframes colors{
+    0%{
+        border-color: yellow;
+    }
+    33%{
+        border-color: aqua;
+    }
+    66%{
+        border-color: pink;
+    }
+    100%{
+        border-color: orange;
+    }
 }
