@@ -4,7 +4,7 @@
     padding: 0;
 }
 
-body{
+body {
     height: 100vh;
     width: 100vw;
     background-color: #EEEEEE;
@@ -12,7 +12,8 @@ body{
     justify-content: center;
     align-items: center;
 }
-.container{
+
+.container {
     border-radius: 15px;
     width: 500px;
     height: 650px;
@@ -22,4 +23,38 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+.upper {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 30px solid red;
+    border-radius: 50%;
+    top: 80px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.lower {
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    border: 30px solid red;
+    border-radius: 50%;
+    top: 250px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.text {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    font-size: 70px;
+    font-weight: bold;
+    color: purple;
 }
