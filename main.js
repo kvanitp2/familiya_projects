@@ -1,7 +1,7 @@
 const board = document.querySelector('.board')
 const body = document.querySelector('body')
 
-let data = [[0, 0, 2, 0], [0, 0, 0, 0], [2, 0, 0, 0], [0, 0, 0, 0]]
+let data = [[0, 0, 2, 2], [0, 0, 0, 0], [2, 0, 0, 0], [0, 0, 0, 0]]
 const colors = {
     0: 'lightgrey', 2: '#84FBAC', 4: '#C7B446', 8: '#BEBD7F', 16: '#2E3A23',
     32: '#CBD0CC', 64: '#7E7B52', 128: ' #474B4E', 256: '#8F8F8', 512: '#354D73',
@@ -28,17 +28,38 @@ function moveController(key) {
             break
     }
 }
+reDrawField()
 
 
+function left() {
+    data.map(row => {
+        for (let i = 0; i < row.length; i++) {
+            if (row[i] === row[i + 1]) {
+                row[i] = row[i] * 2
+                row[i + 1] = 0
+            }
+        }
+    })
+}
+function right() {
+    data.map(row => {
+        for (let i = row.length - 1; i >= 0; i--) {
+            if (row[i] === row[i - 1]) {
+                row[i] = row[i] * 2
+                row[i - 1] = 0
+            }
+        }
+    })
+}
 
-
-
-
-
-
-
-
-
+function clearZeroesAndFills(direction) {
+    data = data.map(row => row.filter(el => el !== 0))
+    data.map(row => {
+        while (row.length < 4) {
+            direction === 'left' ? row.push(0) : row.unshift(0)
+        }
+    })
+}
 
 function reDrawField() {
     board.innerHTML = ''
